@@ -2,4 +2,4 @@
 
 #### A Java game based on the famous board game Ludo.
 
-![](/LudoProject/Documentation//1.png)
+![](/Ludo/Documentation//1.png)
