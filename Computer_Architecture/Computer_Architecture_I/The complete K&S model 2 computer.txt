@@ -1,0 +1,15 @@
+//Using the complete K&S model 2 computer (https://homepages.ecs.vuw.ac.nz/~ian/KandS2/machine.html), 
+//this program takes two integers (The user must store these values in memory locations 9 and 10) and 
+//if the first number is equal or greater than the second, the difference is stored at the memory 
+//location 11. The sum is stored otherwise.
+
+0: LOAD R0 9
+1: LOAD R1 10
+2: SUB R2 R0 R1
+3: BNEG 6
+4: SUB R2 R1 R0
+5: BRANCH 7
+6: ADD R2 R1 R0
+7: STORE 11 R2
+8: HALT
+
