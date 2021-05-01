@@ -1,0 +1,41 @@
+Primeira Prova – Linguagem de Programação II – UFPB – 2020.2
+Professor: Carlos Eduardo Batista
+
+***** ATENÇÃO!!!!!! LEIA TODAS AS INSTRUÇÕES!!!!!! ***********
+
+- A prova tem 4 questões que somam 12 pontos – porém a nota máxima é 10,00
+
+- As respostas da prova devem ser enviadas por e-mail (para bidu @ ci.ufpb.br)
+ em um ÚNICO arquivo ZIP contendo os códigos solicitados (questões 1 e 3) e os
+ arquivos de texto (questões 2 e 4).
+
+- O título do e-mail e do arquivo ZIP deverá conter "[PROVA01-LPII-202]", 
+ seu nome e matrícula.
+
+- TODO CÓDIGO *DEVE* ser comentado com a explicação da lógica e demais 
+ informações solicitadas na questão.
+
+- Plágio será punido com a perda da pontuação das respostas por todos os
+ participantes.
+
+- O envio deverá ser feito até as 16h do dia 26/04/2021
+
+***** ATENÇÃO!!!!!! LEIA TODAS AS INSTRUÇÕES!!!!!! ***********
+
+(Questão 1 - 4 pontos) Faça um programa em C/C++ que crie um arquivo de texto de um dicionário contendo todas as strings com 8 caracteres alfabéticos maiúsculos (de "AAAAAAAA" a "ZZZZZZZZ"). Cada letra do alfabeto (de A a Z) deverá ter sua parte do dicionário gerada por uma thread individual, de tal forma que esta thread gere todas as strings iniciadas por aquela letra (ex. a thread que gerará as strings começando com a letra 'C' gerará as strings de "CAAAAAAA" a "CZZZZZZZ"). O programa deverá gerar um arquivo de texto contendo o dicionário inteiro ou o dicionário dividido em vários arquivos de texto (um para cada letra). 
+
+-----------------------------------------------------
+
+(Questão 2 - 1 ponto) Utilize a execução e a implementação da questão anterior para discutir o ciclo de vida das threads. Faça a relação de cada invocação a funções da API PThreads com a máquina de estados (descrevendo seus estados e transições) que representa o ciclo de vida das threads. A resposta deverá ser colocada em um arquivo de texto (extensão “.txt”) separado.
+
+-----------------------------------------------------
+
+(Questão 3 - 5 pontos) Faça um programa em C/C++ onde você receberá 3 parâmetros: se usará processos ou threads, quantas instâncias serão criadas e um valor em metros, que será o tamanho de uma pista fictícia para uma corrida de 'lebres'. Ou seja, os processos ou threads vão representar lebres nessa corrida fictícia. 
+
+Os processos ou as threads devem executar uma função que receberá dois parâmetros: um valor inteiro que identifique a lebre e um valor real (do tipo float ou double) que represente a distância máxima do salto para uma lebre (para cada salto será gerado um valor aleatório entre 1 e o valor definido, a unidade considerada será cm). Faça as lebres "correrem" nessa "pista" com o tamanho definido na execução do programa. Para cada vez que a função de cada processo/thread (lebre) executar a geração de valores aleatórios (entre 1 e a distância máxima do salto da lebre), uma soma de todos os saltos deverá ser armazenada em uma variável que representará o quanto a lebre já percorreu na pista (uma variável real no escopo da função que a lebre executa). 
+
+A cada "salto" (iteração realizada pela função associada ao processo ou a thread), deverá ser exibida uma mensagem contendo a distância do salto efetuado e qual distância total percorrida (dormindo 1s - função sleep - até que dê outro salto). A primeira 'lebre' cuja variável que represente o quanto a lebre já percorreu na pista atinja um valor maior ou igual ao tamanho da pista deverá exibir uma mensagem onde se declara vencedora e o programa deverá ser finalizado. 
+
+-----------------------------------------------------
+
+(Questão 4 - 2 pontos) Utilize a implementação da questão 3 para destacar as diferenças do uso de threads e processos na programação em C/C++. Destaque trechos do código e realce as diferenças também as diferenças do ponto de vista da execução. A resposta deverá ser colocada em um arquivo de texto (extensão “.txt”) separado.
