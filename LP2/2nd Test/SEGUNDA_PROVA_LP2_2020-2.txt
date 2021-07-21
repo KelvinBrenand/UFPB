@@ -1,0 +1,31 @@
+Segunda Prova – Linguagem de Programação II – UFPB – 2020.2
+Professor: Carlos Eduardo Batista
+
+***** ATENÇÃO!!!!!! LEIA TODAS AS INSTRUÇÕES!!!!!! ***********
+
+- A prova tem 4 questões que somam 12 pontos – porém a nota máxima é 10,00
+
+- As respostas da prova devem ser enviadas por e-mail (para bidu @ ci.ufpb.br)
+ em um ÚNICO arquivo ZIP contendo os códigos e esboços solicitados em arquivos 
+ separados dentro do ZIP. 
+
+- O TÍTULO do e-mail E do ARQUIVO ZIP DEVERÁ conter "[PROVA02-LPII-202]", 
+ seu nome e matrícula.
+
+- TODO CÓDIGO *DEVE* ser comentado com a explicação da lógica e demais 
+ informações solicitadas na questão.
+
+- Plágio será punido com a perda da pontuação das respostas por todos os
+ participantes.
+
+- O envio deverá ser feito até as 15h do dia 31/05/2021
+
+***** ATENÇÃO!!!!!! LEIA TODAS AS INSTRUÇÕES!!!!!! ***********
+
+(Questão 1 - 4 pontos) Faça um programa em C/C++ que simule o controle de temperatura de um motor. O programa deverá ter uma variável global do tipo int chamada temperatura (que armazenará a temperatura em Celsius do motor, com valor inicial 600 C) e três threads além da main, realizando funções diferentes. A primeira thread realizará um incremento na temperatura com um valor aleatório entre -10 e 50 e depois dormirá 300ms. A segunda thread realizará um incremento na temperatura com valor aleatório entre -20 e 20 e depois dormirá 400ms. A terceira thread deverá conter um mecanismo que detecte o quanto antes quando o valor da temperatura ultrapassar 1000C, reduzindo o valor da variável global para 600 novamente. O programa deverá ser finalizado depois de 5 reduções de temperatura do motor. Comente o código explicando o mecanismo utilizado na terceira thread e qual seria a alternativa se não houvesse o requisito de detecção da temperatura de forma mais imediata possível. 
+
+(Questão 2 - 3 pontos) Quais cuidados devem ser tomados, com relação ao desenvolvimento de código concorrente, para manutenção das propriedades de Safety e Liveness? Crie dois esqueletos de código em C/C++  que violem tais propriedades (um para cada).
+
+(Questão 3 - 3 pontos) Esboce a solução para um programa que processe uma imagem em 10 partes e depois reagrupe tais partes, através de algum mecanismo de sincronismo entre as threads. No esboço considere que uma função getParteImagem(int) recupera um array de bytes a ser processado, e a funcao processaImagem(byte) realiza o processamento e retorna 0 em caso de sucesso. É importante que se deixe claro qual é o mecanismo de sincronismo e como pode ser implementado sem incidir em contenção de memória (explique o que é contenção de memória também).
+
+(Questão 4 - 2 pontos) Faça o esboço de código da questão anterior usando variáveis condicionais da API PThreads.

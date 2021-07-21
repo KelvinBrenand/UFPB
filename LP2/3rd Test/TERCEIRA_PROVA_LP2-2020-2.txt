@@ -1,0 +1,86 @@
+Terceira Prova – Linguagem de Programação II – UFPB – 2020.2
+Professor: Carlos Eduardo Batista
+
+*********** ATENÇÃO!!!!!! LEIA TODAS AS INSTRUÇÕES!!!!!! ***********
+
+- A prova tem 3 questões que somam 12 pontos – porém a nota máxima é 10,00
+
+- As respostas da prova devem ser enviadas por e-mail (para bidu @ ci.ufpb.br)
+ em um ÚNICO arquivo ZIP contendo os códigos solicitados em arquivos separados
+ dentro do ZIP. 
+
+- O TÍTULO do e-mail E do ARQUIVO ZIP DEVERÁ conter "[PROVA03-LPII-202]", 
+ seu nome e matrícula. <-------- ATENÇÃO!!!
+
+- TODO CÓDIGO *DEVE* ser comentado com a explicação da lógica e demais 
+ informações solicitadas na questão. <-------- ATENÇÃO!!!
+
+- Cada questão deverá ser respondida em um arquivo SEPARADO. 
+
+- Plágio será punido com a perda da pontuação das respostas por todos os
+ participantes.
+
+- O envio deverá ser feito até as 16h do dia 14/07/2021
+
+*********** ATENÇÃO!!!!!! LEIA TODAS AS INSTRUÇÕES!!!!!! ***********
+
+(Questão 1 - 4 pontos) Faça um programa em C/C++ que implemente uma solução
+para o problema do buffer compartilhado. Com um buffer compartilhado de 256 
+chars, o Programa deverá implementar duas funções:
+
+	- produtor() - gera um char aleatório (valor entre 0 e 255) e 
+	deposita no buffer; exibe o valor e a posição no buffer na tela;
+	dorme 150ms; repete;
+
+	- consumidor() - captura um dos valores disponíveis no buffer 
+	compartilhado e armazena em um arquivo; dorme um tempo aleatório 
+	entre 50ms e 150ms; repete;
+
+A função produtor deverá ser realizada por duas (2) threads; já a função 
+consumidor deverá ser realizada por três (3) threads. Cada consumidor armazena
+as informações em um arquivo diferente. 
+
+Use semáforos para sincronizar o acesso ao buffer compartilhado, de forma
+que todos os números gerados pelos produtores sejam consumidos uma vez, 
+evitando qualquer problema ao ler ou escrever no buffer. Quando o buffer for 
+consumido 4 vezes (ou seja, quando os produtores tiverem gerado 1024
+caracteres e estes forem consumidos) finalize o programa, salvando o conteúdo
+dos arquivos. Comente o código explicando o uso dos semáforos.
+
+(Questão 2 - 3 pontos) Faça um monitor que controle o acesso de escrita e 
+leitura em um arquivo de texto e modifique o código da questão anterior 
+(salvando em um novo arquivo) para que todos os consumidores escrevam em um
+mesmo arquivo (cujo acesso é controlado pelo novo monitor implementado). 
+	
+
+(Questão 3 - 5 pontos) Faça um programa em C/C++ que implemente um servidor
+que atenda os requisitos listados a seguir.
+
+	1) Receba até 10 conexões simultâneas de clientes na porta 8600 TCP;
+
+	2) Cada cliente recebe uma string de boas vindas ao se conectar ao 
+	servidor (ex. string “WELCOME”);
+
+	3) O servidor tratará strings enviadas pelos clientes como comandos, e 
+	retornára o resultado como descrito a seguir. Os seguintes comandos
+	devem ser suportados: 
+
+		a) BCKWRD <STRING>\n fará o servidor retornar o contrário 
+		da <string> recebida pelos clientes (ex. Caso receba “ABCD”
+		deverá retornar “DCBA”); 
+
+		b) RNDNUM\n o servidor irá gerar e retornar um valor aleatório 
+		entre 0 e 1000;
+
+		c) CRTIME\n fará o servidor retornar a data e hora corrente;
+
+		d) FINISH\n fará o servidor finalizar a conexão com o cliente;
+
+		e) Comandos não reconhecidos deverão fazer o servidor retornar
+		"ERROR" para os clientes.
+
+Comente o código explicando a diferença entre os papéis de cliente e servidor, 
+ressaltando quais chamadas feitas no código são necessárias no contexto 
+específico do protocolo TCP. Teste o servidor com múltiplos clientes, usando
+instâncias de telnet ou nc (netcat). 
+
