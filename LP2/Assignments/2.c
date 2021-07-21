@@ -1,23 +1,24 @@
 /*
-1) Faça um programa em que três processos executam paralelamente as seguintes ações:
-• Processo original:
-	- Cria processos "Descendente 0" e "Descendente 1"
-        - Imprime números de 1 a 50, com um intervalo de 1 segundo entre cada número.
-	- Após imprimir todos os números, imprime a frase “Processo original parou de contar”.
-	- Deverá finalizar o processo "descendente 0" usando a função kill()
-	- Invocar a função exit()
+Faça um programa em que três processos executam paralelamente as seguintes ações:
+Processo original:
+	Cria processos "Descendente 0" e "Descendente 1"
+	Imprime números de 1 a 50, com um intervalo de 1 segundo entre cada número.
+	Após imprimir todos os números, imprime a frase “Processo original parou de contar”.
+	Deverá finalizar o processo "descendente 0" usando a função kill()
+	Invocar a função exit()
 
-• Processo Descendente 0 - Executa a função gastarProcessamento() (dos exemplos da disciplina). 
+Processo Descendente 0:
+	Executa a função gastarProcessamento() (dos exemplos da disciplina). 
 
-• Processo Descendente 1 - Imprime os números de 100 a 200, com um intervalo de 1 segundo entre cada
-número.
-	- Antes de imprimir os números, imprime a frase “Descendente 1 foi criado”.
-	- Após imprimir todos os números, imprime a frase “Descendente 1 vai morrer”.
+Processo Descendente 1:
+	Imprime os números de 100 a 200, com um intervalo de 1 segundo entre cada número.
+	Antes de imprimir os números, imprime a frase “Descendente 1 foi criado”.
+	Após imprimir todos os números, imprime a frase “Descendente 1 vai morrer”.
 
-• Requisitos/Dicas:
-◦ Em cada printf os processos devem imprimir o seu pid.
-◦ Use a instrução puts(“..”); depois da linha do printf().
-◦ sleep(1) bloqueia ("dorme") o processo por 1 segundo.
+Requisitos/Dicas:
+	Em cada printf os processos devem imprimir o seu pid.
+	Use a instrução puts(“..”); depois da linha do printf().
+	sleep(1) bloqueia ("dorme") o processo por 1 segundo.
 */
 
 #include <stdlib.h>
