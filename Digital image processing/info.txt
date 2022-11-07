@@ -1,0 +1,6 @@
+3
+3
+center
+box
+50
+True
