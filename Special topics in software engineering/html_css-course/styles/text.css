@@ -1,0 +1,49 @@
+p{
+    font-family: Roboto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.video-title{
+    font-size: 20px;
+    font-weight: bold;
+    width: 300px;
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+
+.info{
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.channel{
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.description{
+    font-size: 20px;
+    width: 300px;
+    color: gray;
+    /* line-height: 10px; */
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.shop-text{
+    font-size: 18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgb(221, 44, 44);
+    color: aliceblue;
+    text-align: center;
+}
+
+.shop-now:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
