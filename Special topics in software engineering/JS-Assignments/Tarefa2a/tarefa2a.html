@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarefa 2a</title>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 20%;
+      margin-top: 20px;
+    }
+
+    td, th {
+      border: 1px solid #000000;
+      text-align: center;
+      padding: 8px;
+    }
+    </style>
+</head>
+<body>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <h1>Operations on two numbers</h1>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 10px;">
+      <input type="number" id="first-number" style="width: 75px;">
+      <input type="number" id="second-number" style="width: 75px;">
+      <button id="calculate-number" onclick="calculate()">Calculate!</button>
+    </div>
+    <div id="opsTable" style="display: flex; flex-direction: column; align-items: center; width: 1340px;"></div>
+  </div>
+
+  <script>
+    let opResults = [{
+      key: '+', value: ''
+    },{
+      key: '*', value: ''
+    },{
+      key: '/', value: ''
+    },{
+      key: '%', value: ''
+    }]
+    
+    let firstNumber = " "
+    let secondNumber = " "
+
+    render()
+    
+    function calculate(){
+      firstNumber = Number(document.getElementById("first-number").value)
+      secondNumber = Number(document.getElementById("second-number").value)
+
+      opResults = []
+      opResults.push({key:'+', value: firstNumber+secondNumber})
+      opResults.push({key:'*', value: firstNumber*secondNumber})
+      opResults.push({key:'/', value: firstNumber/secondNumber})
+      opResults.push({key:'%', value: firstNumber%secondNumber})
+
+      render()
+    }
+
+    function render(){
+      document.getElementById("opsTable").innerHTML=""
+      let table = document.createElement('table')
+
+      let row1 = document.createElement('tr')
+
+      const header1 = document.createElement('th')
+      header1.innerText = 'Operations'
+
+      const header2 = document.createElement('th')
+      header2.innerText = 'Value'
+
+      row1.append(header1, header2)
+      table.appendChild(row1)
+
+      opResults.forEach(function(element){
+        let newRow = document.createElement('tr')
+
+        const data1 = document.createElement('td')
+        data1.innerText = firstNumber + " " + element.key + " " + secondNumber
+
+        const data2 = document.createElement('td')
+        data2.innerText = element.value
+
+        newRow.append(data1,data2)
+        table.appendChild(newRow)
+      })
+
+      document.getElementById("opsTable").appendChild(table)
+    }
+  </script>
+</body>
+</html>
