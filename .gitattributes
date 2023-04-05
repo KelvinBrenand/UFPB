@@ -6,4 +6,4 @@
 # To ignore it use below
 # *.ipynb linguist-documentation
 
-*.ipynb linguist-vendored
+*.ipynb linguist-generated
