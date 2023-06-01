@@ -1,0 +1,24 @@
+Tokens
+
+IDENTYFIER:
+	(a..z | A..Z |_)(a..z | A..Z |_| 0..9)*
+NUMBER:
+	((0-9)*.)?(0-9)+
+ASSIGNMENT:
+	=
+REL_OP:
+	> | >= | < | <= | !=
+SUM:
+	+
+SUBTRACTION:
+	-
+MULTIPLICATION:
+	*
+DIVISION:
+	/
+LEFT_PARENTHESIS:
+	(
+RIGHT_PARENTHESIS:
+	)
+KEYWORD:
+	(int | float | print | if | else)
